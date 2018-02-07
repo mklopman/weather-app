@@ -1,0 +1,32 @@
+td, th {
+	vertical-align: middle !important;
+	text-align: center !important;
+}
+
+.input-group {
+	margin: 20px 0px;
+}
+
+svg {
+	height: 150px;
+}
+
+td:first-of-type, td:first-of-type > div {
+	height: 200px;
+	width: 250px;
+}
+
+.weather-body {
+	background-color: lightgrey;
+	box-shadow: 10px 10px;
+}
+
+.weather-header {
+	text-align: center;
+}
+
+.app-body {
+	width: 100vw;
+	height: 100vh;
+	background-color: lightblue;
+}
