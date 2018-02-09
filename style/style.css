@@ -23,10 +23,20 @@ td:first-of-type, td:first-of-type > div {
 
 .weather-header {
 	text-align: center;
+	font-family: 'Acme', sans-serif;
+	color: midnightblue;
+}
+
+.weather-label {
+	font-family: 'Acme', sans-serif;
+	font-size: 20px;
+	color: midnightblue;
 }
 
 .app-body {
 	width: 100vw;
 	height: 100vh;
 	background-color: lightblue;
+	box-shadow: 10px 10px 5px #aaaaaa;
 }
+

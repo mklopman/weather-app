@@ -10,6 +10,7 @@ import GoogleMap from '../components/google_map';
 
 class WeatherList extends Component {
 	renderWeather(cityData) {
+		console.log(cityData)
 		const name = cityData.city.name;
 		let temps = cityData.list.map(weather => weather.main.temp);
 		temps = temps.map(temp => temp * 9/5 - 459.67);
@@ -19,13 +20,13 @@ class WeatherList extends Component {
 		// const lat = cityData.city.coord.lat;
 		const { lon, lat } = cityData.city.coord; // grabbing the coord object and taking the lat/long props
 
-		console.log(temps);
+		// console.log(temps);
 		return (
 			<tr key={name}>
 				<td><GoogleMap lon={lon} lat={lat} /></td>
-				<td><Chart data={temps} color="orange" units="F" /></td>
-				<td><Chart data={pressures} color="green" units="hPa" /></td>
-				<td><Chart data={humidities} color="black" units="%" /></td>
+				<td className="weather-label"><Chart data={temps} color="orange" units="F" /></td>
+				<td className="weather-label"><Chart data={pressures} color="green" units="hPa" /></td>
+				<td className="weather-label"><Chart data={humidities} color="black" units="%" /></td>
 			</tr>
 			);
 	}
@@ -35,10 +36,10 @@ class WeatherList extends Component {
 			<table className="table table-hover">
 				<thead>
 					<tr>
-						<th>City</th>
-						<th>Temperature (F)</th>
-						<th>Pressure (hPa)</th>
-						<th>Humidity (%)</th>
+						<th className="weather-label">City</th>
+						<th className="weather-label">Temperature (F)</th>
+						<th className="weather-label">Pressure (hPa)</th>
+						<th className="weather-label">Humidity (%)</th>
 					</tr>
 				</thead>
 				<tbody>
